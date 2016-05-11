@@ -9,9 +9,9 @@ The popup by default will display automatically, and can be closed by hitting th
 1. Find the keycodes you desire. You can get them from [this interactive site](http://keycode.info/) or the [MDN](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode).
 2. On line 22 the ```keyStatus``` section begins, the current format for each keycode you wish to use is as follows:
 
-```
-keyCode: {  
-     name: "keyName",  
+```javascript
+keyCode: { //This should be the integer number for sanity's sake.  
+    name: "keyName",  //This name can be anything, but it should remind you what it is.
     pos: false  //This is the default position.
 }
 ```  
