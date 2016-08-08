@@ -4,11 +4,10 @@
 // @version      0.1
 // @description  Floating popup to allow for UI information
 // @author       Cody Uhlrich
-// @match        http://localhost:9868/tdweb/*
-// @grant        none
-// ==/UserScript== 
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.min.js
+// @match        http://localhost:9868/tdweb/*
+// ==/UserScript== 
 
 /* jshint ignore:start */
 var inline_src = (<><![CDATA[
