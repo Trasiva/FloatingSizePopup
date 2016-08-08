@@ -1,4 +1,3 @@
-NodeList.prototype[Symbol.iterator] = [][Symbol.iterator];
 // ==UserScript==
 // @name         Popup HTML Info
 // @namespace    http://tampermonkey.net/
@@ -16,6 +15,7 @@ var inline_src = (<><![CDATA[
 /* jshint ignore:end */
 /* jshint esnext: true */
 
+NodeList.prototype[Symbol.iterator] = [][Symbol.iterator];
 /*
   Create the popup, for now it'll be automatically displayed. Set the display to 'none' if you want it
     hidden until you actually hit the key sequence defined in settings.keyStatus.
