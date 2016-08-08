@@ -1,4 +1,20 @@
 NodeList.prototype[Symbol.iterator] = [][Symbol.iterator];
+// ==UserScript==
+// @name         Popup HTML Info
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Floating popup to allow for UI information
+// @author       Cody Uhlrich
+// @match        http://localhost:9868/tdweb/*
+// @grant        none
+// ==/UserScript== 
+// @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.min.js
+
+/* jshint ignore:start */
+var inline_src = (<><![CDATA[
+/* jshint ignore:end */
+/* jshint esnext: true */
 
 /*
   Create the popup, for now it'll be automatically displayed. Set the display to 'none' if you want it
@@ -191,3 +207,9 @@ function debounce(func, wait, immediate) {
 		}
 	};
 }
+
+/* jshint ignore:start */
+]]></>).toString();
+var c = babel.transform(inline_src);
+eval(c.code);
+/* jshint ignore:end */
